@@ -242,17 +242,17 @@ const ContactPage = () => {
                 {[
                   { 
                     icon: MapPin, 
-                    text: '123 Painter\'s Lane, Colorful City, PC 12345',
+                    text: '23 Bishop Gaul Ave, Harare',
                     label: 'Address'
                   },
                   { 
                     icon: Phone, 
-                    text: '(555) 123-4567',
+                    text: "077 400 4714",
                     label: 'Phone'
                   },
                   { 
                     icon: Mail, 
-                    text: 'contact@paintingcompany.com',
+                    text: 'contact@langtonstouch.com',
                     label: 'Email'
                   },
                   { 

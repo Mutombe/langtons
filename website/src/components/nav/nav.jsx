@@ -79,7 +79,7 @@ const Navigation = () => {
               to={link.path}
               className={`text-white transition-all ${
                 isActive(link.path) 
-                  ? 'font-bold underline scale-105' 
+                  ? 'font-bold border-2 border-white rounded-md px-1 scale-105' 
                   : 'hover:text-opacity-80'
               }`}
               style={{
@@ -127,7 +127,7 @@ const Navigation = () => {
                       to={link.path}
                       className={`text-3xl text-white transition-all ${
                         isActive(link.path) 
-                          ? 'font-bold underline scale-110' 
+                          ? 'font-bold border-2 border-white  rounded-md px-1 scale-110' 
                           : 'hover:text-opacity-80'
                       }`}
                       onClick={() => setIsMenuOpen(false)}

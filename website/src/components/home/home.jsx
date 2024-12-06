@@ -19,12 +19,15 @@ import {
     PaintBucket, Palette, Quote, MapPin
 } from "lucide-react";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [backgroundParticles, setBackgroundParticles] = useState([]);
+  const navigate = useNavigate();
 
   // Responsive and particle background setup
+  
   useEffect(() => {
     const checkMobileView = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -128,6 +131,7 @@ const HeroSection = () => {
                 background: generateGradient(colors.secondary),
                 backgroundSize: '200% auto'
               }}
+              onClick={() => navigate('/contact')}
               variant="default"
             >
               <PaintBucket className="mr-2 group-hover:rotate-12 transition-transform" />
@@ -137,6 +141,7 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="w-full md:w-auto group"
+              onClick={() => navigate('/services')}
             >
               <Palette className="mr-2 group-hover:scale-110 transition-transform" />
               View Our Work
@@ -153,21 +158,21 @@ const HeroSection = () => {
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Simbarashe Mutombe",
       quote: "The team's incredible attention to detail completely transformed our home. From the initial consultation to the final reveal, they listened carefully to our vision and brought it to life with stunning precision. Every room now feels both personal and professionally designed.",
       location: "Waterfalls,Harare",
       profession: "House",
       image: "/user2.png.crdownload"
     },
     {
-      name: "Michael Rodriguez",
+      name: "Romeo Estara",
       quote: "As a busy professional, I was impressed by their punctuality and professionalism. They not only completed the project on time but also delivered work that was truly breathtaking. The creative solutions they proposed solved design challenges I didn't even realize existed.",
       location: "Belverdere, Harare",
       profession: "School",
       image: "/user2.png.crdownload"
     },
     {
-      name: "Emily Chen",
+      name: "Emily Muchena",
       quote: "Their creative approach went far beyond my expectations. They didn't just redesign my space; they reimagined how I could live in it. The thoughtful use of color, texture, and space has completely changed my relationship with my home environment.",
       location: "Gweru, Zimbabwe",
       profession: "Offices",
@@ -225,12 +230,12 @@ const Testimonials = () => {
 
 // Placeholder logos (replace with actual logos)
 const paintCompanyLogos = [
-  { name: "Sherwin-Williams", src: "/api/placeholder/150/100?text=SW" },
-  { name: "Benjamin Moore", src: "/api/placeholder/150/100?text=BM" },
-  { name: "Behr", src: "/api/placeholder/150/100?text=BEHR" },
-  { name: "Valspar", src: "/api/placeholder/150/100?text=VLS" },
-  { name: "PPG", src: "/api/placeholder/150/100?text=PPG" },
-  { name: "Dunn-Edwards", src: "/api/placeholder/150/100?text=DE" }
+  { name: "Dulux", src: "/dulux1.jpg" },
+  { name: "Benjamin Moore", src: "/Benjamin.svg" },
+  { name: "Behr", src: "/behr.jpg" },
+  { name: "Valspar", src: "/valspar.png" },
+  { name: "PPG", src: "/ppg.webp" },
+  { name: "Dunn-Edwards", src: "/dunn.jpg" }
 ];
 
 const PaintingProcess = () => {
@@ -391,7 +396,7 @@ const PaintingProcess = () => {
                 <img 
                   src={logo.src} 
                   alt={logo.name} 
-                  className="max-h-20 max-w-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-h-20 max-w-full hover:grayscale-0 transition-all duration-300"
                 />
               </motion.div>
             ))}

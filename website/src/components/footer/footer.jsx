@@ -47,11 +47,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3">Contact Info</h4>
             <p className="text-sm">
-              <strong>Phone:</strong> (555) 123-4567
+              <strong>Phone </strong> 077 400 4714
               <br />
-              <strong>Email:</strong> magic@langtontouch.com
+              <strong>Email </strong> magic@langtontouch.com
               <br />
-              <strong>Address:</strong> 123 Color Street, Artville, CA 90210
+              <strong>Address </strong> 23 Bishop Gaul Ave, Harare
             </p>
           </div>
 
