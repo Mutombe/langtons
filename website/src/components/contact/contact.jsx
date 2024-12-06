@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Custom Leaflet marker icon
 const customMarkerIcon = new L.Icon({
-  iconUrl: '/api/placeholder/32/32',
+  iconUrl: '/LT.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]
@@ -85,7 +85,7 @@ const ContactPage = () => {
   };
 
   // Company location coordinates
-  const companyLocation = [40.7128, -74.0060]; // New York City coordinates as an example
+  const companyLocation = [-17.8144672, 31.0240217];
 
   return (
     <div 
