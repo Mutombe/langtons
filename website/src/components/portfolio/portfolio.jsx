@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { colors, generateGradient, getRandomPaintSplash } from '../utils/colors';
+import { useNavigate } from 'react-router-dom';
 
 const portfolioCategories = [
   { 
@@ -76,6 +77,7 @@ const PortfolioPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [backgroundColors, setBackgroundColors] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const navigate = useNavigate();
 
   // Dynamic background color generation
   useEffect(() => {
@@ -253,6 +255,7 @@ const PortfolioPage = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={() => navigate("/contact")}
               className="text-secondary-foreground border-white hover:bg-white hover:text-secondary-foreground"
             >
               Schedule a Consultation

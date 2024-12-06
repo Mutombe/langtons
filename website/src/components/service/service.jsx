@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { colors, generateGradient, getRandomPaintSplash } from '../utils/colors';
+import { useNavigate } from 'react-router-dom';
 
 const serviceDetails = [
   {
@@ -125,6 +126,7 @@ const ServiceProcessSteps = ({ service }) => {
 const ServicesPage = () => {
   const [activeService, setActiveService] = useState(serviceDetails[0]);
   const [backgroundColors, setBackgroundColors] = useState([]);
+  const navigate = useNavigate();
 
   // Dynamic background color generation
   useEffect(() => {
@@ -322,6 +324,7 @@ const ServicesPage = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={() => navigate('/contact')}
               className="text-secondary-foreground border-white hover:bg-white hover:text-secondary-foreground"
             >
               Schedule Consultation

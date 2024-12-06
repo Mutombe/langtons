@@ -15,6 +15,7 @@ import 'leaflet/dist/leaflet.css';
 import { Button } from '../ui/button';
 import { toast } from 'sonner';
 import { colors, generateGradient, getRandomPaintSplash } from '../utils/colors';
+import { useNavigate } from 'react-router-dom';
 
 // Custom Leaflet marker icon
 const customMarkerIcon = new L.Icon({
@@ -34,6 +35,7 @@ const ContactPage = () => {
   });
   const [backgroundColors, setBackgroundColors] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   // Check for mobile screen size
   useEffect(() => {
@@ -335,6 +337,7 @@ const ContactPage = () => {
             </p>
             <Button 
               size="lg" 
+              onClick={() => navigate("/contact")}
               variant="outline"
               className="text-sm md:text-base text-secondary-foreground border-white hover:bg-white hover:text-secondary-foreground"
             >
